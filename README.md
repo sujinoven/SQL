@@ -1,115 +1,113 @@
-# Python Learning
+# SQL Learning and Practice
 
-A collection of Python practice notebooks, chapter-wise exercises, and data analysis projects documenting my learning journey toward AI and Machine Learning.
+A collection of MySQL practice scripts and chapter-wise exercises documenting my SQL learning journey. The examples cover relational databases, data retrieval, joins, aggregations, subqueries, stored procedures, and window functions.
 
-The repository covers Python fundamentals, data structures, object-oriented programming, data cleaning, and visualization through practical examples.
+The exercises use student, sales, e-commerce, and hospital data to practice answering practical questions with SQL.
 
 ## Topics Covered
 
-- **Python fundamentals:** strings, conditions, loops, functions, user input, and exception handling.
-- **Data structures:** lists, tuples, sets, dictionaries, and their common methods.
-- **Functional programming:** list comprehensions, lambda expressions, `map()`, `filter()`, and `reduce()`.
-- **Data analysis:** Pandas DataFrames, filtering, sorting, missing values, duplicates, grouping, pivot tables, cross-tabulation, concatenation, and merges.
-- **Data visualization:** Matplotlib and Seaborn charts, including histograms, bar charts, scatter plots, box plots, pair plots, and heatmaps.
-- **Object-oriented programming:** classes, objects, constructors, encapsulation, inheritance, abstraction, and polymorphism.
-- **Python modules:** creating and importing a custom arithmetic module.
+- **Database design:** creating databases and tables, data types, primary keys, and foreign keys.
+- **Data insertion and schema changes:** `INSERT INTO` and `ALTER TABLE`.
+- **Data retrieval:** `SELECT`, `WHERE`, `IN`, `ORDER BY`, and `LIMIT`.
+- **Aggregations:** `COUNT()`, `SUM()`, `AVG()`, `MAX()`, `GROUP BY`, and `HAVING`.
+- **Joins:** inner, left, right, cross, and self joins.
+- **Combining results:** `UNION`.
+- **Subqueries:** filtering records using results from another query.
+- **Stored procedures:** reusable queries with `IN` and `OUT` parameters.
+- **Window functions:** `RANK()`, `DENSE_RANK()`, `LAG()`, `LEAD()`, and running totals.
 
 ## Repository Guide
 
-| Location                                       | Contents                                                                                        |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `Practice/Python_basics.ipynb`                 | Number-guessing examples using loops, conditions, functions, and error handling                 |
-| `Practice/Python_Coding_Questions_Part1.ipynb` | Short coding exercises involving strings, lists, dictionaries, and DataFrames                   |
-| `Practice/Python_For_DataAnalysis/`            | Pandas practice with restaurant orders, football statistics, and employee data                  |
-| `Practice/Advanced_Data_Analysis_WithPython/`  | Insurance and sales data exercises using grouping, aggregation, pivot tables, and concatenation |
-| `Practice/Data Visualization/`                 | Introductory and intermediate visualization notebooks using `mtcars.csv` and sample data        |
-| `Practice/OOPS/`                               | OOP examples, `Math_Module.py`, and a notebook demonstrating module imports                     |
-| `Tasks/Python_Chapter1/`                       | String methods, control flow, functions, Rock–Paper–Scissors, and a word-guessing game          |
-| `Tasks/Python_Chapter2/`                       | Data structure methods and creating DataFrames from dictionaries                                |
-| `Tasks/Python_Chapter4/`                       | Python and Pandas exercises, sales data cleaning, joins, and functional programming             |
-| `Tasks/Python_Chapter5/`                       | Superstore analysis notebook, dataset, task sheet, and presentation                             |
-| `Tasks/Python_Chapter6/`                       | OOP exercises using delivery-vehicle examples                                                   |
+| File or Folder | Contents |
+|---|---|
+| `Practice/Students-DB_practice.sql` | Student database with students, courses, enrollments, and sample records |
+| `Practice/SQL_PRactice.sql` | E-commerce queries covering filtering, aggregation, joins, subqueries, ranking, and procedures |
+| `Practice/joins_practice.sql` | Join exercises using hospital data |
+| `Tasks/Chapter_1_Task/` | Chapter 1 task sheet |
+| `Tasks/Chapter_2_Task/` | Sales database script, sample data spreadsheets, database diagram, and task sheet |
+| `Tasks/Chapter_3_Task/` | Filtering and sorting exercises using sales data |
+| `Tasks/Chapter_4_Task/` | Aggregate functions, grouped summaries, and subqueries |
+| `Tasks/Chapter_5_Task/` | Hospital database tables, sample data, and join exercises |
+| `Tasks/Chapter_6_Task/` | Stored procedures and window-function exercises |
+| `04. SQL Course.pdf` | SQL course reference material |
 
-## Featured Work
+## Practice Highlights
 
-### Superstore Data Analysis
+### Student Database
 
-[View the notebook](Tasks/Python_Chapter5/Superstore_Project.ipynb)
+[View the script](Practice/Students-DB_practice.sql)
 
-An exploratory data analysis exercise using retail transaction data. The notebook includes data inspection, missing-value checks, date conversion, grouped summaries, and visualizations.
+Creates a `studentsdb` database with three related tables:
 
-It explores:
+- `students`
+- `courses`
+- `enrollment`
 
-- Sales and profit by product category.
-- Sales across regions.
-- The top 10 states and products by sales.
-- Sales contribution by customer segment.
+Demonstrates auto-incrementing primary keys, foreign-key relationships, inserting records, and basic queries.
 
-Supporting files include `Superstore.csv` and `SUPERSTORE DATA ANALYSIS.pptx`.
+### Sales Data Exercises
 
-### Interactive Python Games
+[Explore the tasks](Tasks/Chapter_2_Task/)
 
-- **Number Guessing:** practice loops, conditional feedback, random numbers, and input handling in `Practice/Python_basics.ipynb`.
-- **Rock–Paper–Scissors:** play against the computer in `Tasks/Python_Chapter1/Task_3.ipynb`.
-- **Word Guessing:** guess letters in a hidden word with limited wrong attempts in `Tasks/Python_Chapter1/Task_4.ipynb`.
+Uses the `sales_management` database to practice working with customers, products, employees, orders, and payments.
 
-### Object-Oriented Programming Practice
+Exercises include identifying high-credit customers, finding low-stock products, filtering orders by status, summarizing payments, and comparing values against averages.
 
-The OOP notebooks use bank-account, vehicle, and delivery examples to demonstrate classes, encapsulation, inheritance, abstraction, and polymorphism.
+### Hospital Database Exercises
 
-`Math_Module.py` provides addition, subtraction, multiplication, and division functions, with usage examples in `import_math_module.ipynb`.
+[View the script](Tasks/Chapter_5_Task/Chapter_5_Answer.sql)
+
+Defines patient, doctor, department, appointment, treatment, billing, and employee tables.
+
+The exercises explore relationships between patients and appointments, doctors and departments, treatment records, bills, and employee reporting structures.
+
+### Stored Procedures and Window Functions
+
+[Explore Chapter 6](Tasks/Chapter_6_Task/)
+
+Includes procedures for retrieving patient appointments and calculating a patient’s total treatment cost.
+
+Window-function exercises cover patient rankings, cumulative treatment costs, and comparisons with previous or next treatment costs.
 
 ## Getting Started
 
-### 1. Clone the repository
+### Requirements
+
+- MySQL 8.0 or later for the window-function exercises.
+- MySQL Workbench or another compatible SQL client.
+
+### Clone the Repository
 
 ```bash
-git clone https://github.com/sujinoven/Python_Learning.git
-cd Python_Learning
+git clone https://github.com/sujinoven/SQL.git
+cd SQL
 ```
 
 Alternatively, download and extract the repository ZIP from GitHub.
 
-### 2. Install the notebook tools and libraries
+### Run the Exercises
 
-Use Python 3, preferably in a virtual environment:
+1. Connect your SQL client to a local MySQL server.
+2. Start with `Practice/Students-DB_practice.sql`.
+3. Execute statements section by section and inspect the results.
+4. Prepare the sales database before working through Chapters 3 and 4.
+5. Prepare the hospital database from Chapter 5 before running the hospital join exercises and Chapter 6 scripts.
 
-```bash
-python -m pip install notebook pandas numpy matplotlib seaborn
-```
+## Setup Notes
 
-The repository does not currently include a pinned dependency file.
+These scripts capture ongoing practice and require some preparation:
 
-### 3. Launch Jupyter Notebook
+- `Practice/SQL_PRactice.sql` expects an existing `ecommerce_db`; its setup script is not included.
+- The Chapter 2 script references `orders`, `payments`, and `orderdetails` without defining those tables. Create the missing tables before running the related statements.
+- The Chapter 5 script attempts to add a primary key to `Appointments` after already defining it. Skip the duplicate statement.
+- Some queries need corrections or missing semicolons before execution. Table-name capitalization may also need to match your MySQL environment.
 
-```bash
-python -m notebook
-```
+Use a dedicated practice database and run selected sections while learning.
 
-Open a notebook and run its cells in order. Game notebooks require input while running.
+## Learning Goal
 
-**Dataset paths:** many notebooks read files using relative paths, such as `pd.read_csv("Superstore.csv")`. Keep the supplied folder structure and use the notebook’s folder as the working directory. Keep `Math_Module.py` alongside its import notebook.
-
-## Suggested Learning Order
-
-1. Start with string methods and control-flow exercises in `Tasks/Python_Chapter1/`.
-2. Explore the number-guessing notebook and interactive games.
-3. Practice data structures and DataFrame creation in `Tasks/Python_Chapter2/`.
-4. Work through `Pandas_Crash_Course.ipynb`.
-5. Continue with advanced data analysis and Chapter 4 exercises.
-6. Explore the visualization notebooks and Superstore project.
-7. Study the OOP practice notebooks and Chapter 6 tasks.
-
-## Additional Resources
-
-- `Python_Interview_questions.docx`
-- `Python_Recab_Session_ppt.zip`
-- Chapter-specific task sheets under `Tasks/`
-
-## Learning Notes
-
-These notebooks are learning exercises and work in progress. Some cells contain unfinished code or errors and may need correction before a complete run. Run them interactively, check the results, and treat debugging as part of the practice.
+Build confidence in relational database design and SQL querying, with a focus on skills useful for data analysis and AI/ML work.
 
 ## Author
 
-Maintained by [S](https://github.com/sujinoven)UJINOVEN as part of an ongoing journey in Python, data analysis, and AI/ML.
+Maintained by [SUJINOVEN](https://github.com/sujinoven).
